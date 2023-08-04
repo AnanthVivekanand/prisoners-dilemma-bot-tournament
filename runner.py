@@ -1,6 +1,6 @@
 from bots.AlwaysCooperate import AlwaysCooperate
 from bots.AlwaysDefect import AlwaysDefect
-from bots.Shrey_A import ShreyBot_A
+from bots.ShreyBot_1 import ShreyBot_1
 
 import pandas as pd
 
@@ -39,7 +39,7 @@ def get_score(move1, move2):
         raise Exception("Invalid move")
     
 
-bots = [None, AlwaysCooperate(), AlwaysCooperate(), AlwaysDefect(), AlwaysDefect(), ShreyBot_A()]
+bots = [None, AlwaysCooperate(), AlwaysCooperate(), AlwaysDefect(), AlwaysDefect(), ShreyBot_1()]
 
 scores = [[simulate(bot1, bot2) for bot2 in bots] for bot1 in bots]
 
