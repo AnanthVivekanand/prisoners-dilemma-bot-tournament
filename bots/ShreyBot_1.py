@@ -1,6 +1,7 @@
 from BasicBotInterface import BasicBotInterface
 import random
 
+
 class ShreyBot_1(BasicBotInterface):
     def move(self, history, opponent):
         # self-handshake
@@ -15,15 +16,11 @@ class ShreyBot_1(BasicBotInterface):
 
         hislen = len(history)
 
-        cooperation_sensitivity = 0.75
-        # if lots of cooperation, cooperate (if anyone is reading the source code, DM to form an alliance)
-        if history.count("cooperate") > cooperation_sensitivity * hislen:
-            return "cooperate"
-        # if lots of defection, defect
-        elif history.count("defect") > cooperation_sensitivity * hislen:
-            return "defect"
-
-        if random.random() < 0.5:
-            return "cooperate"
+        # tit for tat strat
+        if len(history) > 0:
+            if history[hislen - 1][0] == "defect":
+                return "defect"
+            else:
+                return "cooperate"
         else:
-            return "defect"
+            return "cooperate"

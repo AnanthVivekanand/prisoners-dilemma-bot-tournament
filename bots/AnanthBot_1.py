@@ -6,6 +6,9 @@ class AnanthBot_1(BasicBotInterface):
         if (opponent.name() == "AnanthBot_1"):
             return "cooperate"
         
+        if (len(history) == 29):
+            return "defect"
+        
         if (opponent.move(history, self) == "cooperate"):
             test_history = history.copy()
             test_history.append(("defect", "cooperate"))
