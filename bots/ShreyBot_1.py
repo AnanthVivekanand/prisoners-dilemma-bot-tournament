@@ -17,10 +17,10 @@ class ShreyBot_1(BasicBotInterface):
 
         cooperation_sensitivity = 0.75
         # if lots of cooperation, cooperate (if anyone is reading the source code, DM to form an alliance)
-        if hislen.count("cooperate") > cooperation_sensitivity * hislen:
+        if history.count("cooperate") > cooperation_sensitivity * hislen:
             return "cooperate"
         # if lots of defection, defect
-        elif hislen.count("defect") > cooperation_sensitivity * hislen:
+        elif history.count("defect") > cooperation_sensitivity * hislen:
             return "defect"
 
         if random.random() < 0.5:

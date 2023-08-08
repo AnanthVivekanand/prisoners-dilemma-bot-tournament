@@ -1,6 +1,7 @@
-,AlwaysCooperate,AlwaysCooperate,AlwaysDefect,AlwaysDefect,ShreyBot_1
-AlwaysCooperate,90,90,-30,-30,-30
-AlwaysCooperate,90,90,-30,-30,-30
-AlwaysDefect,150,150,0,0,0
-AlwaysDefect,150,150,0,0,0
-ShreyBot_1,150,150,0,0,90
+,AlwaysCooperate,AlwaysCooperate,AlwaysDefect,AlwaysDefect,ShreyBot_1,AnanthBot_1
+AlwaysCooperate,90,90,0,0,0,0
+AlwaysCooperate,90,90,0,0,0,0
+AlwaysDefect,150,150,30,30,30,30
+AlwaysDefect,150,150,30,30,30,30
+ShreyBot_1,150,150,30,30,90,43
+AnanthBot_1,150,150,30,30,80,90
